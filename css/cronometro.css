@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Orbitron:wght@400..900&family=PT+Mono&family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Orbitron:wght@400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: rgb(240, 242, 245);
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.24);
+    border-radius: 16px;
+    padding: 20px 30px;
+    border: 2px solid #000;
+    text-align: center;
+    min-width: 400px;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-family: "Exo 2", monospace;
+    font-size: 38px;
+    margin-bottom: 40px;
+    color: black;
+}
+
+#display {
+    font-family: "PT Mono", monospace;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+#buttons {
+    display: flex;
+    gap: 10px;
+}
+
+input[type='button'] {
+    width: 100%;
+    color: black;
+    border: 2px solid black;
+    border-radius: 5px;
+    color: white;
+    padding: 8px;
+    font-family: "Exo 2", monospace;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#start {
+    background-color: #61C373;
+}
+
+#start:hover {
+    background-color: #4fa55f;
+}
+
+#stop {
+    background-color: #2E95D3;
+    display: none;
+}
+
+#stop:hover {
+    background-color: #216a98;
+}
+
+#clear {
+    background-color: #F22C3D;
+    display: none;
+}
+
+#clear:hover {
+    background-color: #c32532;
+}

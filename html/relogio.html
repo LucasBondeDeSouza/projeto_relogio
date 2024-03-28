@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Horário Mundial</title>
+    <link rel="stylesheet" href="../css/relogio.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.33/moment-timezone-with-data.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="titulo">Relógio Mundial</h1>
+
+        <div id="relogio">
+            <select id="local">
+                <option value="America/Sao_Paulo">São Paulo - BR</option>
+                <option value="America/Argentina/Buenos_Aires">Buenos Aires - ARG</option>
+                <option value="America/New_York">Nova York - EUA</option>
+                <option value="America/Mexico_City">Cidade do México - MX</option>
+                <option value="America/Toronto">Toronto - CAN</option>
+                <option value="Europe/London">Londres - UK</option>
+                <option value="Europe/Paris">Paris - FR</option>
+                <option value="Europe/Berlin">Berlim - DE</option>
+                <option value="Europe/Moscow">Moscou - RUS</option>
+                <option value="Asia/Tokyo">Tóquio - JPN</option>
+                <option value="Asia/Dubai">Dubai - EAU</option>
+                <option value="Australia/Sydney">Sydney - AUS</option>
+                <option value="Africa/Cairo">Cairo - EGY</option>
+            </select>
+            
+            <input type="button" value="Pesquisar" id="btn-tempo">
+            <div id="resultado">
+                <div id="clima">
+                    <div id="imagem-tempo"></div>
+                    <div id="temperatura"></div>
+                </div>
+                <div id="bandeira"></div>
+                <div id="tempo"></div>
+                <div id="horario"></div>
+            </div>                      
+        </div>
+    </div>
+</body>
+<script src="../js/relogio.js"></script>
+
+</html>

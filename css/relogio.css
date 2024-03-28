@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Orbitron:wght@400..900&family=PT+Mono&family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Orbitron:wght@400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: rgb(240, 242, 245);
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.24);
+    border-radius: 16px;
+    padding: 20px 30px;
+    border: 2px solid #000;
+    text-align: center;
+    min-width: 400px;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-family: "Orbitron", monospace;
+    font-size: 38px;
+    margin-bottom: 30px;
+    color: black;
+}
+
+#local {
+    width: 100%;
+    height: 40px;
+    font-size: 25px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+input[type='button'] {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 25px;
+    background-color: #2E95D3;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 15px;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+input[type='button']:hover {
+    background-color: #216a98;
+}
+
+#bandeira img {
+    width: 50px;
+    height: 30px;
+}
+
+#resultado {
+    display: none;
+    justify-content: space-around;
+    align-items: center; 
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.24);
+    border-radius: 16px;
+    padding: 20px 30px;
+    border: none;
+    text-align: center;
+    min-width: 400px;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+#bandeira img {
+    width: 75px;
+    height: 50px;
+}
+
+#bandeira {
+    position: absolute; /* Define a posição absoluta para a bandeira */
+    top: -20px; /* Ajusta a posição da bandeira para cima, em relação ao elemento pai */
+    left: 50%; /* Centraliza horizontalmente a bandeira */
+    transform: translateX(-50%); /* Centraliza horizontalmente a bandeira */
+}
+
+#cidade {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#temperatura {
+    font-size: 22px;
+}
+
+.imagem-tempo {
+    width: 30px; /* Defina o tamanho desejado da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+#horario {
+    font-family: "PT Mono", monospace;
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 15px;
+}
