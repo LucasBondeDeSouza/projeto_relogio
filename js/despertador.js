@@ -1,37 +1,31 @@
-const startButton = document.getElementById("start");
-const stopButton = document.getElementById("stop");
-const horarioInput = document.getElementById("horario");
+const horarioInput = document.getElementById('horario');
+const horario_definido = document.getElementById('horario_definido');
+const stopButton = document.getElementById('stop');
 const meuAudio = new Audio("../audio/som_despertador.mp3");
 
-// Função para verificar o horário atual e acionar o alarme, se necessário
-function verificarHorario() {
-    const horarioEscolhido = horarioInput.value;
+function verificar_hora() {
     const agora = new Date();
     const horaAtual = agora.getHours();
-    const minutoAtual = agora.getMinutes();
+    const minutosAtuais = agora.getMinutes();
 
-    const [horaEscolhida, minutoEscolhido] = horarioEscolhido.split(":").map(Number);
-
-    if (horaAtual === horaEscolhida && minutoAtual === minutoEscolhido) {
-        meuAudio.play();
-        startButton.style.display = 'none';
-        stopButton.style.display = 'block';
+    if (minutosAtuais < 10) {
+        return `${horaAtual}:0${minutosAtuais}`
     } else {
-        startButton.style.display = 'block';
-        stopButton.style.display = 'none';
+        return `${horaAtual}:${minutosAtuais}`
     }
 }
 
-// Verificar o horário a cada minuto
-setInterval(verificarHorario, 60000);
+setInterval(() => {
+    const horarioEscolhido = horarioInput.value;
+    horario_definido.innerHTML =
+        `<h2>Horário definido: ${horarioEscolhido}</h2><br>`
 
-startButton.addEventListener("click", function () {
-    verificarHorario(); // Verificar o horário imediatamente ao clicar em "Start"
-});
+    if (horarioEscolhido == verificar_hora()) {
+        meuAudio.play();
+        stopButton.style.display = 'block'
+    }
+}, 1000);
 
-stopButton.addEventListener("click", function () {
-    meuAudio.pause();
-    meuAudio.currentTime = 0; // Reinicia o áudio para o início
-    stopButton.style.display = 'none'; // Oculta o botão "Stop" quando o alarme é parado
-    startButton.style.display = 'block';
-});
+stopButton.addEventListener('click', () => {
+    location.reload();
+})

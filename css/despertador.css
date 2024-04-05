@@ -51,6 +51,10 @@ input[type='time'] {
     margin-top: 15px;
 }
 
+#horario_definido {
+    display: none;
+}
+
 #buttons {
     display: flex;
     gap: 10px;
@@ -72,6 +76,7 @@ input[type='button'] {
 
 #start {
     background-color: #61C373;
+    display: none;
 }
 
 #start:hover {
