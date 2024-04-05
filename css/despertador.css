@@ -16,6 +16,18 @@ body {
     background-color: rgb(240, 242, 245);
 }
 
+.voltar {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+}
+
+.voltar a {
+    text-decoration: none;
+    color: #000;
+    font-size: 30px;
+}
+
 .container {
     background: rgba(255, 255, 255, 0.24);
     border-radius: 16px;

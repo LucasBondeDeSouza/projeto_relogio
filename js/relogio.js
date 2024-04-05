@@ -4,6 +4,7 @@ const temperatura = document.getElementById('temperatura')
 const resultado = document.getElementById('resultado')
 var container = document.getElementsByClassName('container')[0];
 const titulo = document.getElementById('titulo')
+var voltar = document.querySelector('.voltar')
 
 var intervalo;
 
@@ -79,6 +80,7 @@ btn_tempo.addEventListener("click", () => {
                         titulo.style.color = 'black'
                         container.style.border = '2px solid #000'
                         document.body.style.backgroundColor = 'rgb(240, 242, 245)';
+                        voltar.classList.remove('noite');
                     }
                 } else {
                     // Noite
@@ -90,7 +92,8 @@ btn_tempo.addEventListener("click", () => {
                     document.getElementById('tempo').appendChild(img_tempo);
                     titulo.style.color = '#fff'
                     container.style.border = 'none'
-                    document.body.style.backgroundColor = 'rgb(23, 32, 44)';
+                    document.body.style.backgroundColor = 'rgb(23, 32, 44)'
+                    voltar.classList.add('noite');
                 }
             } else {
                 temperatura.innerHTML += 'Desculpe, não foi possível obter a temperatura para ' + cidade;
